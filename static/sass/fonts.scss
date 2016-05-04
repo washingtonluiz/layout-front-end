@@ -1,0 +1,14 @@
+/*
+	Fonts
+*/
+@font-face {
+    font-family: stdbold;
+    src: url(../fonts/OfficinaSerifStd-Bold.otf);
+}
+@font-face {
+    font-family: stdbook;
+    src: url(../fonts/OfficinaSerifStd-Book.otf);
+}
+
+$stdBold: stdbold;
+$stdBook: stdbook;

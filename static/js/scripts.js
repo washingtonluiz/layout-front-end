@@ -1,0 +1,1 @@
+try{$("#form-contato").validate({rules:{nome:{required:!0}},messages:{nome:{required:"Favor digitar seu nome."}}})}catch(err){}
