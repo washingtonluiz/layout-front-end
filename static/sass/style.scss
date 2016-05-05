@@ -1,3 +1,150 @@
 @import 'grid.scss';
 @import 'fonts.scss';
+@import 'componentes.scss';
+@import 'header.scss';
+@import 'footer.scss';
 
+.planos{
+	padding: 40px 0;
+	width: 100%;
+}
+.conheca-planos{
+	@include borderRadius(2px);
+	border: 1px solid #dfdddd;
+	padding: 0 100px 40px 100px;
+	h2.titulo{
+		background: #fff;
+		color: #660099;
+		display: block;
+		font-family: $stdBold;
+		font-size: 22px;
+		margin: -12px auto 0 auto;
+		text-align: center;
+		width: 190px;
+	}
+	.desc{
+		color: #5f5f5f;
+		font-family: $stdBold;
+		font-size: 16px;
+		text-align: center;
+		margin: 10px 0 20px 0;
+	}
+	.lista-planos{
+		.list-item:first-child{
+			margin-left: 0;
+		}
+		.list-item{
+			background: #ecebeb;
+			display: inline-block;
+			margin-left: 4%;
+			width: 30%;
+			h3.titulo{
+				color: #660099;
+				font-family: $stdBold;
+				font-size: 14px;
+				text-align: center;
+			}
+			.velocidade {
+				@include borderRadiusTop(4px);
+				background: #ff9900;
+				margin-right: 0;
+				padding: 10px 0;
+				text-align: center;
+				.promo-veloc{
+					font-size: 50px;
+					margin-top: 5px;
+				}
+			}
+			.plano{
+				margin-bottom: 0;
+				padding-bottom: 40px;
+				.item-plano{
+					display: table;
+					font-family: $stdBold;
+					font-size: 20px;
+					margin: 10px auto 0 auto;
+					width: 150px;
+					small{
+						color: #737372;
+					}
+				}
+			}
+			.footer-price:before{
+				border-left: 15px solid transparent;
+				border-right: 15px solid transparent;
+				border-bottom: 15px solid #660099;
+				content: "";
+				display: inline-block;
+				height: 0;
+				left: 50%;
+				margin-left: -15px;
+				position: absolute;
+				top: -15px;
+				vertical-align: middle;
+				width: 0; 
+
+			}
+			.footer-price{
+				@include borderRadiusBottom(4px);
+				background: #660099;
+				color: #fff;
+				font-family: $stdBold;
+				font-size: 50px;
+			    padding: 10px 50px 20px 50px;
+			    position: relative;
+    			text-align: center;
+    			.box-price{
+    				position: relative;
+    				.cifrao{
+						font-size: 18px;
+						left: 14px;
+						position: absolute;
+						top: 10px;
+						vertical-align: super;
+	    			}
+	    			.centavos{
+	    				font-size: 18px;
+						position: absolute;
+						right: 10px;
+						top: 5px;
+					    vertical-align: super;
+	    			}
+	    			sub{
+						bottom: 5px;
+						font-size: 16px;
+						position: absolute;
+						right: 5px;
+						vertical-align: sub;
+	    			}
+    			}
+    			.contrata{
+    				@include borderRadius(4px);
+    				border: none;
+    				background: rgba(153, 204, 51, 1.0);
+    				color: #ffffff;
+    				cursor: pointer;
+    				display: block;
+    				font-family: $stdBook;
+					font-size: 16px;
+					margin: 10px auto 0 auto;
+    				padding: 5px 10px 5px 30px;
+    				position: relative;
+    				transition: background 0.5s ease;
+					&:before{
+						background: url(../img/ico-arrow-right.png) left center no-repeat;
+						content: '';
+						display: block;
+						height: 18px;
+						left: 5px;
+						position: absolute;
+						width: 18px;
+	    			}
+	    			&:hover{
+	    				background: rgba(153, 204, 51, 0.8);
+	    				transition: background 0.5s ease;
+	    			}
+    			}
+			}
+		}
+	}
+}

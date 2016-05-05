@@ -9,5 +9,422 @@
   font-family: stdbook;
   src: url(../fonts/OfficinaSerifStd-Book.otf); }
 
-body {
-  font-family: stdbook; }
+.wrap {
+  margin: 0 auto;
+  max-width: 960px;
+  position: relative; }
+  @media only screen and (max-width: 480px) {
+    .wrap {
+      padding: 0 10px; } }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    .wrap {
+      padding: 0 10px; } }
+
+.fl {
+  display: inline;
+  float: left; }
+
+.fr {
+  display: inline;
+  float: right; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clearfix {
+  height: 100%; }
+
+@-webkit-keyframes giga {
+  0% {
+    text-shadow: 0px 0px 0px #fff; }
+  50% {
+    text-shadow: 0px 0px 5px #fff; }
+  100% {
+    text-shadow: 0px 0px 0px #fff; } }
+
+.modal {
+  background: rgba(0, 0, 0, 0.9);
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10; }
+  .modal .close {
+    color: #ffffff;
+    font-family: cursive;
+    font-size: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px; }
+
+.header {
+  background: #ffb316;
+  max-height: 590px;
+  padding: 40px 0;
+  position: relative;
+  width: 100%; }
+  @media only screen and (max-width: 480px) {
+    .header {
+      background: #ffffff;
+      border-bottom: 1px solid #660099;
+      display: inline-block;
+      padding: 10px 0; } }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    .header {
+      background: #ffffff;
+      border-bottom: 1px solid #660099;
+      display: inline-block;
+      padding: 30px 0; } }
+  .header:before {
+    background: -moz-linear-gradient(top, #e26b02 0%, rgba(226, 107, 2, 0.99) 1%, rgba(226, 107, 2, 0) 100%);
+    background: -webkit-linear-gradient(top, #e26b02 0%, rgba(226, 107, 2, 0.99) 1%, rgba(226, 107, 2, 0) 100%);
+    background: linear-gradient(to bottom, #e26b02 0%, rgba(226, 107, 2, 0.99) 1%, rgba(226, 107, 2, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e26b02', endColorstr='#00e26b02',GradientType=0 );
+    content: '';
+    display: block;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1; }
+    @media only screen and (max-width: 480px) {
+      .header:before {
+        display: none; } }
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      .header:before {
+        display: none; } }
+  .header:after {
+    background: -moz-linear-gradient(top, rgba(226, 107, 2, 0) 0%, rgba(226, 107, 2, 0.99) 99%, #e26b02 100%);
+    background: -webkit-linear-gradient(top, rgba(226, 107, 2, 0) 0%, rgba(226, 107, 2, 0.99) 99%, #e26b02 100%);
+    background: linear-gradient(to bottom, rgba(226, 107, 2, 0) 0%, rgba(226, 107, 2, 0.99) 99%, #e26b02 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e26b02', endColorstr='#e26b02',GradientType=0 );
+    content: '';
+    display: block;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1; }
+    @media only screen and (max-width: 480px) {
+      .header:after {
+        display: none; } }
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      .header:after {
+        display: none; } }
+  .header .logo-mobile {
+    display: none;
+    width: 150px; }
+    @media only screen and (max-width: 480px) {
+      .header .logo-mobile {
+        display: block; } }
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      .header .logo-mobile {
+        display: block; } }
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      .header .logo-mobile {
+        width: 240px; } }
+  .header .phone-mobile {
+    display: none;
+    width: 20px; }
+    @media only screen and (max-width: 480px) {
+      .header .phone-mobile {
+        display: block; } }
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      .header .phone-mobile {
+        display: block; } }
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      .header .phone-mobile {
+        width: 27px; } }
+  .header .logo {
+    color: #660099;
+    display: table;
+    font-family: stdbold;
+    font-size: 105px;
+    margin: 40px auto 10px 180px; }
+    @media only screen and (max-width: 480px) {
+      .header .logo {
+        display: none; } }
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      .header .logo {
+        display: none; } }
+    .header .logo:before {
+      content: 'Celular Direto';
+      display: block;
+      font-size: 40px;
+      position: absolute;
+      top: -25px; }
+    .header .logo:after {
+      animation: giga 3s infinite;
+      animation-name: giga;
+      animation-duration: 2s;
+      animation-iteration-count: 3;
+      animation-fill-mode: forwards;
+      -webkit-animation: giga 2s infinite;
+      -webkit-animation-name: giga;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-iteration-count: 3;
+      -webkit-animation-fill-mode: forwards;
+      -ms-transform: rotate(5deg);
+      -webkit-transform: rotate(5deg);
+      -moz-transform: rotate(5deg);
+      -o-transform: rotate(5deg);
+      transform: rotate(5deg);
+      border: 3px solid #fcead4;
+      color: #fcead4;
+      content: 'Giga';
+      display: inline-block;
+      font-size: 50px;
+      margin-left: 10px;
+      padding: 0 5px;
+      position: absolute;
+      top: 35px; }
+
+.box-planos {
+  margin: 0 auto;
+  display: table; }
+  @media only screen and (max-width: 480px) {
+    .box-planos {
+      display: none; } }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    .box-planos {
+      display: none; } }
+
+.velocidade {
+  margin-right: 20px; }
+  .velocidade .promo-veloc {
+    color: #660099;
+    font-family: stdbold;
+    font-size: 64px;
+    letter-spacing: -4px; }
+  .velocidade p {
+    color: #fcead4;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-family: stdbold;
+    margin-top: 5px; }
+  .velocidade .tipo-veloc {
+    background: url(../img/4g.png) no-repeat;
+    background-size: 164px;
+    display: block;
+    height: 50px;
+    margin-top: 5px;
+    width: 164px; }
+
+.plano {
+  margin-bottom: 10px; }
+  .plano .item-plano {
+    background: url(../img/icon-plus.png) 5px center no-repeat;
+    background-size: 28px;
+    color: #6e2383;
+    display: block;
+    font-family: stdbook;
+    font-size: 24px;
+    margin-bottom: 10px;
+    max-width: 228px;
+    padding-left: 40px; }
+    .plano .item-plano small {
+      color: #fcead4;
+      display: block;
+      font-size: 12px; }
+
+.price {
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -ms-transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  background: #660099;
+  border: 1px solid #680297;
+  clear: both;
+  color: #ffffff;
+  display: table;
+  font-family: stdbold;
+  font-size: 60px;
+  margin: 0 auto;
+  padding: 5px 50px 5px 40px;
+  position: relative;
+  text-align: center;
+  z-index: 2; }
+  .price sup {
+    font-size: 20px;
+    vertical-align: super; }
+  .price sup.cifrao {
+    display: block;
+    left: 20px;
+    position: absolute;
+    top: 14px; }
+  .price sup.centavos {
+    display: block;
+    right: 25px;
+    position: absolute;
+    top: 15px; }
+  .price sub {
+    bottom: 15px;
+    font-size: 16px;
+    position: absolute;
+    right: 15px;
+    vertical-align: sub; }
+
+.footer {
+  background: #660099;
+  border-top: 1px solid #e9e9e9;
+  color: #ffffff;
+  height: 70px;
+  width: 100%; }
+  .footer .box-footer {
+    margin: 17px auto 0 auto;
+    display: table; }
+    .footer .box-footer .revendedor {
+      display: block;
+      font-family: stdbook;
+      font-size: 14px;
+      text-align: center; }
+    .footer .box-footer .celulardireto {
+      display: block;
+      font-family: stdbold;
+      font-size: 22px; }
+      @media only screen and (max-width: 480px) {
+        .footer .box-footer .celulardireto {
+          font-size: 18px; } }
+
+.planos {
+  padding: 40px 0;
+  width: 100%; }
+
+.conheca-planos {
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border: 1px solid #dfdddd;
+  padding: 0 100px 40px 100px; }
+  .conheca-planos h2.titulo {
+    background: #fff;
+    color: #660099;
+    display: block;
+    font-family: stdbold;
+    font-size: 22px;
+    margin: -12px auto 0 auto;
+    text-align: center;
+    width: 190px; }
+  .conheca-planos .desc {
+    color: #5f5f5f;
+    font-family: stdbold;
+    font-size: 16px;
+    text-align: center;
+    margin: 10px 0 20px 0; }
+  .conheca-planos .lista-planos .list-item:first-child {
+    margin-left: 0; }
+  .conheca-planos .lista-planos .list-item {
+    background: #ecebeb;
+    display: inline-block;
+    margin-left: 4%;
+    width: 30%; }
+    .conheca-planos .lista-planos .list-item h3.titulo {
+      color: #660099;
+      font-family: stdbold;
+      font-size: 14px;
+      text-align: center; }
+    .conheca-planos .lista-planos .list-item .velocidade {
+      -webkit-border-top-left-radius: 4px;
+      -webkit-border-top-right-radius: 4px;
+      -moz-border-radius-topleft: 4px;
+      -moz-border-radius-topright: 4px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      background: #ff9900;
+      margin-right: 0;
+      padding: 10px 0;
+      text-align: center; }
+      .conheca-planos .lista-planos .list-item .velocidade .promo-veloc {
+        font-size: 50px;
+        margin-top: 5px; }
+    .conheca-planos .lista-planos .list-item .plano {
+      margin-bottom: 0;
+      padding-bottom: 40px; }
+      .conheca-planos .lista-planos .list-item .plano .item-plano {
+        display: table;
+        font-family: stdbold;
+        font-size: 20px;
+        margin: 10px auto 0 auto;
+        width: 150px; }
+        .conheca-planos .lista-planos .list-item .plano .item-plano small {
+          color: #737372; }
+    .conheca-planos .lista-planos .list-item .footer-price:before {
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 15px solid #660099;
+      content: "";
+      display: inline-block;
+      height: 0;
+      left: 50%;
+      margin-left: -15px;
+      position: absolute;
+      top: -15px;
+      vertical-align: middle;
+      width: 0; }
+    .conheca-planos .lista-planos .list-item .footer-price {
+      -webkit-border-bottom-right-radius: 4px;
+      -webkit-border-bottom-left-radius: 4px;
+      -moz-border-radius-bottomright: 4px;
+      -moz-border-radius-bottomleft: 4px;
+      border-bottom-right-radius: 4px;
+      border-bottom-left-radius: 4px;
+      background: #660099;
+      color: #fff;
+      font-family: stdbold;
+      font-size: 50px;
+      padding: 10px 50px 20px 50px;
+      position: relative;
+      text-align: center; }
+      .conheca-planos .lista-planos .list-item .footer-price .box-price {
+        position: relative; }
+        .conheca-planos .lista-planos .list-item .footer-price .box-price .cifrao {
+          font-size: 18px;
+          left: 14px;
+          position: absolute;
+          top: 10px;
+          vertical-align: super; }
+        .conheca-planos .lista-planos .list-item .footer-price .box-price .centavos {
+          font-size: 18px;
+          position: absolute;
+          right: 10px;
+          top: 5px;
+          vertical-align: super; }
+        .conheca-planos .lista-planos .list-item .footer-price .box-price sub {
+          bottom: 5px;
+          font-size: 16px;
+          position: absolute;
+          right: 5px;
+          vertical-align: sub; }
+      .conheca-planos .lista-planos .list-item .footer-price .contrata {
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border: none;
+        background: #99cc33;
+        color: #ffffff;
+        cursor: pointer;
+        display: block;
+        font-family: stdbook;
+        font-size: 16px;
+        margin: 10px auto 0 auto;
+        padding: 5px 10px 5px 30px;
+        position: relative;
+        transition: background 0.5s ease; }
+        .conheca-planos .lista-planos .list-item .footer-price .contrata:before {
+          background: url(../img/ico-arrow-right.png) left center no-repeat;
+          content: '';
+          display: block;
+          height: 18px;
+          left: 5px;
+          position: absolute;
+          width: 18px; }
+        .conheca-planos .lista-planos .list-item .footer-price .contrata:hover {
+          background: rgba(153, 204, 51, 0.8);
+          transition: background 0.5s ease; }

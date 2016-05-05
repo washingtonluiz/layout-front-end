@@ -1,0 +1,200 @@
+.header{
+	background: #ffb316;
+	max-height: 590px;
+	padding: 40px 0;
+	position: relative;
+	width: 100%;
+	@include grid-breakpoint(phone){
+    	background: #ffffff;
+    	border-bottom: 1px solid #660099;
+    	display: inline-block;
+    	padding: 10px 0;
+  	}
+  	@include grid-breakpoint(tablet){
+    	background: #ffffff;
+    	border-bottom: 1px solid #660099;
+    	display: inline-block;
+    	padding: 30px 0;
+  	}
+	&:before{
+		background: -moz-linear-gradient(top, rgba(226,107,2,1) 0%, rgba(226,107,2,0.99) 1%, rgba(226,107,2,0) 100%); 
+		background: -webkit-linear-gradient(top, rgba(226,107,2,1) 0%,rgba(226,107,2,0.99) 1%,rgba(226,107,2,0) 100%); 
+		background: linear-gradient(to bottom, rgba(226,107,2,1) 0%,rgba(226,107,2,0.99) 1%,rgba(226,107,2,0) 100%); 
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e26b02', endColorstr='#00e26b02',GradientType=0 );
+		content: '';
+		display: block;
+		height: 60px;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+		@include grid-breakpoint(phone, tablet){
+	    	display: none;
+	  	}
+	}
+	&:after{
+		background: -moz-linear-gradient(top, rgba(226,107,2,0) 0%, rgba(226,107,2,0.99) 99%, rgba(226,107,2,1) 100%);
+		background: -webkit-linear-gradient(top, rgba(226,107,2,0) 0%,rgba(226,107,2,0.99) 99%,rgba(226,107,2,1) 100%);
+		background: linear-gradient(to bottom, rgba(226,107,2,0) 0%,rgba(226,107,2,0.99) 99%,rgba(226,107,2,1) 100%); 
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e26b02', endColorstr='#e26b02',GradientType=0 );
+		content: '';
+		display: block;
+		height: 60px;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		z-index: 1;
+		@include grid-breakpoint(phone, tablet){
+	    	display: none;
+	  	}
+	}
+	.logo-mobile{
+		display: none;
+		width: 150px;
+		@include grid-breakpoint(phone, tablet){
+	    	display: block;
+	  	}
+	  	@include grid-breakpoint(tablet){
+	    	width: 240px;
+	  	}
+	}
+	.phone-mobile{
+		display: none;
+		width: 20px;
+		@include grid-breakpoint(phone, tablet){
+	    	display: block;
+	  	}
+	  	@include grid-breakpoint(tablet){
+	    	width: 27px;
+	  	}
+	}
+	.logo{
+		color: #660099;
+		display: table;
+		font-family: $stdBold;
+		font-size: 105px;
+	    margin: 40px auto 10px 180px;
+	    @include grid-breakpoint(phone, tablet){
+	    	display: none;
+	  	}
+		&:before{
+			content:'Celular Direto';
+			display: block;
+			font-size: 40px;
+			position: absolute;
+			top: -25px;
+		}
+		&:after{
+			animation:giga 3s infinite ;
+			animation-name:giga;
+			animation-duration:2s;
+			animation-iteration-count:3;
+			animation-fill-mode: forwards;
+
+			-webkit-animation:giga 2s infinite ;
+			-webkit-animation-name:giga;
+			-webkit-animation-duration:2s;
+			-webkit-animation-iteration-count:3;
+			-webkit-animation-fill-mode: forwards;
+			@include rotacionar(5deg);
+			border: 3px solid #fcead4;
+			color: #fcead4;
+			content: 'Giga';
+			display: inline-block;
+			font-size: 50px;
+			margin-left: 10px;
+		    padding: 0 5px;
+			position: absolute;
+		    top: 35px;
+		}
+	}
+}
+.box-planos{
+	margin: 0 auto;
+	display: table;
+	@include grid-breakpoint(phone, tablet){
+    	display: none;
+  	}
+}
+.velocidade{
+	margin-right: 20px;
+	.promo-veloc{
+		color: #660099;
+		font-family: $stdBold;
+		font-size: 64px;
+		letter-spacing: -4px;
+	}
+	p{
+		color: #fcead4;
+		font-size: 28px;
+		text-transform: uppercase;
+		font-family: $stdBold;
+		margin-top: 5px;
+	}
+	.tipo-veloc{
+		background: url(../img/4g.png) no-repeat;
+		background-size: 164px;
+		display: block;
+		height: 50px;
+		margin-top: 5px;
+		width: 164px;
+	}
+}
+.plano{
+    margin-bottom: 10px;
+	.item-plano{
+		background: url(../img/icon-plus.png)5px center no-repeat;
+		background-size: 28px;
+		color: #6e2383;
+		display: block;
+		font-family: $stdBook;
+		font-size: 24px;
+		margin-bottom: 10px;
+		max-width: 228px;
+		padding-left: 40px;
+		small{
+			color: #fcead4;
+			display: block;
+			font-size: 12px;
+		}
+	}
+}
+.price{
+	@include borderRadius(2px);
+	@include rotacionar(-5deg);
+	background: #660099;
+	border: 1px solid #680297;
+	clear: both;
+	color: #ffffff;
+	display: table;
+	font-family: $stdBold;
+	font-size: 60px;
+	margin: 0 auto;
+    padding: 5px 50px 5px 40px;
+    position: relative;
+	text-align: center;
+	z-index: 2;
+	sup{
+		font-size: 20px;
+	    vertical-align: super;
+	}
+	sup.cifrao{
+	    display: block;
+	    left: 20px;
+	    position: absolute;
+	    top: 14px;
+	}
+	sup.centavos{
+	    display: block;
+	    right: 25px;
+	    position: absolute;
+        top: 15px;
+	}
+	sub{
+		bottom: 15px;
+		font-size: 16px;
+		position: absolute;
+    	right: 15px;
+		vertical-align: sub;
+	}
+}
