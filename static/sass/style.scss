@@ -12,6 +12,10 @@
 	@include borderRadius(2px);
 	border: 1px solid #dfdddd;
 	padding: 0 100px 40px 100px;
+	@include grid-breakpoint(phone, tablet){
+		padding: 0 10px 10px 10px;
+
+	}
 	h2.titulo{
 		background: #fff;
 		color: #660099;
@@ -38,6 +42,10 @@
 			display: inline-block;
 			margin-left: 4%;
 			width: 30%;
+			@include grid-breakpoint(phone, tablet){
+				margin: 0 0 20px 0;
+				width: 100%;
+			}
 			h3.titulo{
 				color: #660099;
 				font-family: $stdBold;
@@ -101,13 +109,20 @@
 						position: absolute;
 						top: 10px;
 						vertical-align: super;
+						@include grid-breakpoint(phone, tablet){
+							left: -3px;
+    						top: 8px;
+						}
 	    			}
 	    			.centavos{
 	    				font-size: 18px;
 						position: absolute;
-						right: 10px;
+						right: -10px;
 						top: 5px;
 					    vertical-align: super;
+					    @include grid-breakpoint(phone, tablet){
+							right: -10px;
+						}
 	    			}
 	    			sub{
 						bottom: 5px;
@@ -115,6 +130,9 @@
 						position: absolute;
 						right: 5px;
 						vertical-align: sub;
+						@include grid-breakpoint(phone, tablet){
+						    right: -17px;
+						}
 	    			}
     			}
     			.contrata{

@@ -119,6 +119,7 @@
         display: none; } }
   .header .logo-mobile {
     display: none;
+    margin: 0 auto;
     width: 150px; }
     @media only screen and (max-width: 480px) {
       .header .logo-mobile {
@@ -129,18 +130,6 @@
     @media only screen and (min-width: 481px) and (max-width: 768px) {
       .header .logo-mobile {
         width: 240px; } }
-  .header .phone-mobile {
-    display: none;
-    width: 20px; }
-    @media only screen and (max-width: 480px) {
-      .header .phone-mobile {
-        display: block; } }
-    @media only screen and (min-width: 481px) and (max-width: 768px) {
-      .header .phone-mobile {
-        display: block; } }
-    @media only screen and (min-width: 481px) and (max-width: 768px) {
-      .header .phone-mobile {
-        width: 27px; } }
   .header .logo {
     color: #660099;
     display: table;
@@ -304,6 +293,12 @@
   -webkit-border-radius: 2px;
   border: 1px solid #dfdddd;
   padding: 0 100px 40px 100px; }
+  @media only screen and (max-width: 480px) {
+    .conheca-planos {
+      padding: 0 10px 10px 10px; } }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    .conheca-planos {
+      padding: 0 10px 10px 10px; } }
   .conheca-planos h2.titulo {
     background: #fff;
     color: #660099;
@@ -326,6 +321,14 @@
     display: inline-block;
     margin-left: 4%;
     width: 30%; }
+    @media only screen and (max-width: 480px) {
+      .conheca-planos .lista-planos .list-item {
+        margin: 0 0 20px 0;
+        width: 100%; } }
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      .conheca-planos .lista-planos .list-item {
+        margin: 0 0 20px 0;
+        width: 100%; } }
     .conheca-planos .lista-planos .list-item h3.titulo {
       color: #660099;
       font-family: stdbold;
@@ -391,18 +394,38 @@
           position: absolute;
           top: 10px;
           vertical-align: super; }
+          @media only screen and (max-width: 480px) {
+            .conheca-planos .lista-planos .list-item .footer-price .box-price .cifrao {
+              left: -3px;
+              top: 8px; } }
+          @media only screen and (min-width: 481px) and (max-width: 768px) {
+            .conheca-planos .lista-planos .list-item .footer-price .box-price .cifrao {
+              left: -3px;
+              top: 8px; } }
         .conheca-planos .lista-planos .list-item .footer-price .box-price .centavos {
           font-size: 18px;
           position: absolute;
-          right: 10px;
+          right: -10px;
           top: 5px;
           vertical-align: super; }
+          @media only screen and (max-width: 480px) {
+            .conheca-planos .lista-planos .list-item .footer-price .box-price .centavos {
+              right: -10px; } }
+          @media only screen and (min-width: 481px) and (max-width: 768px) {
+            .conheca-planos .lista-planos .list-item .footer-price .box-price .centavos {
+              right: -10px; } }
         .conheca-planos .lista-planos .list-item .footer-price .box-price sub {
           bottom: 5px;
           font-size: 16px;
           position: absolute;
           right: 5px;
           vertical-align: sub; }
+          @media only screen and (max-width: 480px) {
+            .conheca-planos .lista-planos .list-item .footer-price .box-price sub {
+              right: -17px; } }
+          @media only screen and (min-width: 481px) and (max-width: 768px) {
+            .conheca-planos .lista-planos .list-item .footer-price .box-price sub {
+              right: -17px; } }
       .conheca-planos .lista-planos .list-item .footer-price .contrata {
         border-radius: 4px;
         -webkit-border-radius: 4px;

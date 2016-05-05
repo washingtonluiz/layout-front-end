@@ -50,22 +50,13 @@
 	}
 	.logo-mobile{
 		display: none;
+		margin: 0 auto;
 		width: 150px;
 		@include grid-breakpoint(phone, tablet){
 	    	display: block;
 	  	}
 	  	@include grid-breakpoint(tablet){
 	    	width: 240px;
-	  	}
-	}
-	.phone-mobile{
-		display: none;
-		width: 20px;
-		@include grid-breakpoint(phone, tablet){
-	    	display: block;
-	  	}
-	  	@include grid-breakpoint(tablet){
-	    	width: 27px;
 	  	}
 	}
 	.logo{
