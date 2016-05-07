@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 	Fonts
 */
@@ -47,7 +48,7 @@
     text-shadow: 0px 0px 0px #fff; } }
 
 .modal {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.65);
   bottom: 0;
   display: none;
   left: 0;
@@ -55,13 +56,13 @@
   right: 0;
   top: 0;
   z-index: 10; }
-  .modal .close {
-    color: #ffffff;
-    font-family: cursive;
-    font-size: 20px;
-    position: absolute;
-    top: 20px;
-    right: 20px; }
+
+.btn {
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  padding: 5px 18px; }
 
 .header {
   background: #ffb316;
@@ -320,6 +321,7 @@
     background: #ecebeb;
     display: inline-block;
     margin-left: 4%;
+    transition: box-shadow 0.5s ease;
     width: 30%; }
     @media only screen and (max-width: 480px) {
       .conheca-planos .lista-planos .list-item {
@@ -329,6 +331,11 @@
       .conheca-planos .lista-planos .list-item {
         margin: 0 0 20px 0;
         width: 100%; } }
+    .conheca-planos .lista-planos .list-item:hover {
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+      box-shadow: 0px 0px 20px #660099;
+      transition: box-shadow 0.5s ease; }
     .conheca-planos .lista-planos .list-item h3.titulo {
       color: #660099;
       font-family: stdbold;
@@ -451,3 +458,173 @@
         .conheca-planos .lista-planos .list-item .footer-price .contrata:hover {
           background: rgba(153, 204, 51, 0.8);
           transition: background 0.5s ease; }
+
+/*
+	Conteúdo Modal
+*/
+.box-conteudo {
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  background: #ffffff;
+  box-shadow: 0px 0px 20px #070707;
+  height: 540px;
+  left: 50%;
+  margin-left: -340px;
+  margin-top: -250px;
+  padding: 70px 40px;
+  position: absolute;
+  top: 50%;
+  width: 680px; }
+  .box-conteudo .close {
+    background: #b9b9b9;
+    color: #ffffff;
+    font-family: stdbold;
+    font-size: 14px;
+    padding: 4px 6px;
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+  .box-conteudo .box-circulo {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background: #ffffff;
+    height: 100px;
+    left: 50%;
+    margin-left: -50px;
+    position: absolute;
+    top: -50px;
+    width: 100px; }
+    .box-conteudo .box-circulo .circulo {
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      background: #660099;
+      color: #ffffff;
+      display: block;
+      font-family: stdbold;
+      font-size: 50px;
+      height: 90px;
+      left: 50%;
+      line-height: 90px;
+      margin-left: -45px;
+      margin-top: -45px;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      width: 90px; }
+  .box-conteudo .tipo-form {
+    background: url(../img/bg-tipo-form.png) 30% bottom no-repeat; }
+    .box-conteudo .tipo-form .list-item {
+      -webkit-border-top-left-radius: 10px;
+      -webkit-border-top-right-radius: 10px;
+      -moz-border-radius-topleft: 10px;
+      -moz-border-radius-topright: 10px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      background: #ff9900;
+      max-width: 180px;
+      position: relative; }
+      .box-conteudo .tipo-form .list-item .nome {
+        -webkit-border-top-left-radius: 10px;
+        -webkit-border-top-right-radius: 10px;
+        -moz-border-radius-topleft: 10px;
+        -moz-border-radius-topright: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background: #660099;
+        color: #ffffff;
+        font-family: stdbold;
+        font-size: 16px;
+        padding: 5px 15px 5px 0;
+        text-align: right;
+        max-width: 160px; }
+        .box-conteudo .tipo-form .list-item .nome .count {
+          left: 15px;
+          position: absolute; }
+          .box-conteudo .tipo-form .list-item .nome .count:after {
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            background: #a677c6;
+            content: '';
+            display: block;
+            height: 6px;
+            left: 14px;
+            position: absolute;
+            top: 2px;
+            width: 6px; }
+  .box-conteudo .plano-escolhido {
+    color: #686868;
+    font-family: stdbold;
+    font-size: 18px;
+    margin-top: 20px; }
+    .box-conteudo .plano-escolhido .plano {
+      color: #660099;
+      font-family: stdbook;
+      font-size: 16px; }
+  .box-conteudo .frm {
+    margin-top: 20px; }
+    .box-conteudo .frm label.error {
+      bottom: -21px;
+      color: red;
+      font-family: stdbook;
+      font-size: 14px;
+      left: 0;
+      position: absolute; }
+    .box-conteudo .frm label {
+      color: #686868;
+      display: block;
+      font-family: stdbold;
+      font-size: 16px;
+      margin-bottom: 5px; }
+    .box-conteudo .frm .campo:first-child {
+      margin-top: 0px; }
+    .box-conteudo .frm .campo {
+      margin-top: 20px;
+      position: relative; }
+    .box-conteudo .frm .nasc, .box-conteudo .frm .cpf, .box-conteudo .frm .tel {
+      display: inline-block;
+      margin-left: 2%;
+      width: 31%; }
+    .box-conteudo .frm .nasc {
+      margin-left: 0; }
+    .box-conteudo .frm .tel label.error:last-child {
+      bottom: -36px; }
+    .box-conteudo .frm .tel .n-ddd {
+      padding-left: 0;
+      text-align: center;
+      width: 25%; }
+    .box-conteudo .frm .tel .n-tel {
+      width: 72%; }
+    .box-conteudo .frm input[type='text'] {
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+      transition: box-shadow 0.3s ease;
+      border: 1px solid #cecece;
+      height: 40px;
+      padding-left: 10px;
+      width: 100%; }
+      .box-conteudo .frm input[type='text']:focus {
+        transition: box-shadow 0.3s ease;
+        border: 1px solid #660099;
+        box-shadow: 0px 0px 10px #660099; }
+    .box-conteudo .frm .continuar {
+      transition: background 0.5s ease;
+      background: #f59900;
+      color: #ffffff;
+      font-family: stdbook;
+      font-size: 16px;
+      margin-top: 20px;
+      text-transform: uppercase; }
+      .box-conteudo .frm .continuar:hover {
+        transition: background 0.5s ease;
+        background: rgba(245, 153, 0, 0.8); }
+  .box-conteudo .footer-conteudo {
+    color: #666666;
+    bottom: 10px;
+    font-family: stdbold;
+    font-size: 12px;
+    right: 10px;
+    position: absolute; }
+    .box-conteudo .footer-conteudo .celulardireto {
+      color: #660099;
+      font-family: stdbook;
+      font-size: 16px; }

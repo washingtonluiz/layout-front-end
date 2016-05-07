@@ -15,6 +15,78 @@
 	<![endif]-->
 </head>
 <body>
+
+	<!-- Tela do Modal -->
+	<div class="modal">
+		<div class="box-conteudo">
+			<!-- Link para fechar Modal -->
+			<a href="" class="close" alt="Fechar" title="Fechar">X</a>
+			<!-- Fim Link para fechar Modal -->
+			
+			<!-- Logo Topo Modal -->
+			<div class="box-circulo">
+				<span class="circulo">CD</span>
+			</div>
+			<!-- Fim Logo Topo Modal -->
+
+			<!-- Formulário Contrato -->
+			<fieldset class="form-contrato">
+				<ul class="tipo-form">
+					<li class="dados-pessoais list-item"><div class="nome"><span class="count">1</span> Dados Pessoais</div></li>
+				</ul>
+
+				<div class="plano-escolhido" data-plano="">Plano escolhido: <span class="plano"></span></div>
+
+				<form action="" class="frm-contract frm" id="frm-contract">
+					<div class="campo">
+						<label for="nome">Nome Completo</label>
+						<input type="text" name="nome" class="nome" placeholder="Nome Completo" autofocus>
+					</div>
+
+					<div class="campo nasc">
+						<label for="nasc">Nascimento</label>
+						<input type="text" name="nasc" class="dt-nasc" placeholder="DD/MM/AAAA">
+					</div>
+
+					<div class="campo cpf">
+						<label for="cpf">CPF</label>
+						<input type="text" name="cpf" class="n-cpf" placeholder="096.205.007-50">
+					</div>
+
+					<div class="campo tel">
+						<label for="tel">Telefone de Contato</label>
+						<input type="text" name="ddd" class="n-ddd" placeholder="021">
+						<input type="text" name="tel" class="n-tel" placeholder="xxxxxxxx">
+					</div>
+
+					<div class="campo">
+						<label for="email">E-mail</label>
+						<input type="text" name="email" class="email" placeholder="E-mail">
+					</div>
+
+					<div class="campo">
+						<label for="nomemae">Nome Completo da Mãe</label>
+						<input type="text" name="nomemae" class="nome-mae" placeholder="Nome Completo da Mãe">
+					</div>
+
+					<button type="submit" class="btn continuar jcontinuar fr">Continuar</button>
+				</form>
+			</fieldset>
+			<!-- Fim Formulário Contrato -->
+
+			<!-- Tela de Sucesso -->
+			<div class="box-sucesso">
+				
+			</div>
+			<!-- Tela de Sucesso -->
+
+
+
+			<div class="footer-conteudo">Powered by <span class="celulardireto">celulardireto</span></div>
+		</div>
+	</div>
+	<!-- Fim Tela do Modal -->
+
 	<header class='header'>
 		<div class="wrap">
 			<img src="static/img/logocelulardireto.jpg" alt="Celular Direto" title="Celular Direto" class="logo-mobile">
@@ -66,7 +138,7 @@
 				</p>
 
 				<ul class="lista-planos">
-					<li class="list-item">
+					<li class="list-item" data-plano="1GB">
 						<div class="velocidade">
 							<h3 class="titulo">Celular Direto Controle</h3>
 							<span class="promo-veloc">
@@ -101,7 +173,7 @@
 						</div>
 					</li>
 
-					<li class="list-item">
+					<li class="list-item" data-plano="1,5GB">
 						<div class="velocidade">
 							<h3 class="titulo">Celular Direto Controle</h3>
 							<span class="promo-veloc">
@@ -136,7 +208,7 @@
 						</div>
 					</li>
 
-					<li class="list-item">
+					<li class="list-item" data-plano="2GB">
 						<div class="velocidade">
 							<h3 class="titulo">Celular Direto Controle</h3>
 							<span class="promo-veloc">
@@ -182,6 +254,8 @@
 		</div>
 	</footer>
 
-
+<script type="text/javascript" src="static/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="static/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="static/js/scripts.js"></script>
 </body>
 </html>

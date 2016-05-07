@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
-var uglify = require('gulp-uglify');
+// var uglify = require('gulp-uglify');
 
 /* Converter SASS em CSS */
 gulp.task('sass', function(){
@@ -18,14 +18,14 @@ gulp.task('minify-css', function() {
 });
 
 /* Minifica o JS */
-gulp.task('minify-js', function() {
-  return gulp.src('static/js/*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('static/js'));
-});
+// gulp.task('minify-js', function() {
+//   return gulp.src('static/js/*.js')
+//     .pipe(uglify())
+//     .pipe(gulp.dest('static/js'));
+// });
 
 /* Verificando arquivos */
 gulp.task('watch', function(){
   gulp.watch('static/sass/**/*.scss', ['sass']);
-  gulp.watch('static/js/**/*.js', ['minify-js']);
+  // gulp.watch('static/js/**/*.js', ['minify-js']);
 });
