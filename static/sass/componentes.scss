@@ -47,6 +47,10 @@
   -o-transform: rotate($val);
   transform: rotate($val);
 }
+@mixin hoverButton($r, $g, $b, $opacity){
+  transition: background 0.5s ease;
+  background: rgba($r, $g, $b, $opacity);
+}
 
 //Componentes
 .wrap{
@@ -100,6 +104,9 @@
     right: 0;
     top: 0;
     z-index: 10;
+    @include grid-breakpoint(phone, tablet){
+      position: absolute;
+    }
   }
 
   //Botões
@@ -108,4 +115,5 @@
     border: none;
     cursor: pointer;
     padding: 5px 18px;
+    text-transform: uppercase;
   }

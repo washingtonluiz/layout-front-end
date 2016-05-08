@@ -35,7 +35,7 @@
 					<li class="dados-pessoais list-item"><div class="nome"><span class="count">1</span> Dados Pessoais</div></li>
 				</ul>
 
-				<div class="plano-escolhido" data-plano="">Plano escolhido: <span class="plano"></span></div>
+				<div class="plano-escolhido" data-plano="" data-valor="">Plano escolhido: <span class="plano"></span></div>
 
 				<form action="" class="frm-contract frm" id="frm-contract">
 					<div class="campo">
@@ -55,7 +55,7 @@
 
 					<div class="campo tel">
 						<label for="tel">Telefone de Contato</label>
-						<input type="text" name="ddd" class="n-ddd" placeholder="021">
+						<input type="text" name="ddd" class="n-ddd" placeholder="xx">
 						<input type="text" name="tel" class="n-tel" placeholder="xxxxxxxx">
 					</div>
 
@@ -76,7 +76,24 @@
 
 			<!-- Tela de Sucesso -->
 			<div class="box-sucesso">
-				
+				<h2 class="congratulations">Parabéns!</h2>
+				<p class="desc">Sua linha CD de número <span class="desc-ddd"></span> <span class="desc-tel"></span> agora possui o plano Celular Direto Controle <span class="desc-plano"></span></p>
+				<p class="msg-resp">Em instantes você receberá um e-mail do nosso Agente Oficial Celulardireto e um SMS confirmando a ativação do seu novo plano. Assim que receber a confirmação por SMS, você já poderá usufruir de todos os benefícios do seu novo plano.</p>
+
+				<div class="box-dados-plano">
+					<div class="dados1">
+						<div class="dado">Código do Pedido: <span class="cod cont-dado">00000001</span></div>
+						<div class="dado">Nome: <span class="dado-nome cont-dado"></span></div>
+						<div class="dado">Plano: <span class="dado-plano cont-dado"></span></div>
+						<div class="dado">Vencimento: <span class="dado-venc cont-dado">Dia 10 de cada Mês</span></div>
+
+					</div>
+					<div class="dados2">
+						<div class="dado">CPF: <span class="dado-cpf cont-dado"></span></div>
+						<div class="dado">Valor: <span class="dado-valor cont-dado"></span></div>
+					</div>
+					<button class="btn btn-ok jok">Ok</button>
+				</div>
 			</div>
 			<!-- Tela de Sucesso -->
 
@@ -138,7 +155,7 @@
 				</p>
 
 				<ul class="lista-planos">
-					<li class="list-item" data-plano="1GB">
+					<li class="list-item" data-plano="1GB" data-valor="39,99">
 						<div class="velocidade">
 							<h3 class="titulo">Celular Direto Controle</h3>
 							<span class="promo-veloc">
@@ -173,7 +190,7 @@
 						</div>
 					</li>
 
-					<li class="list-item" data-plano="1,5GB">
+					<li class="list-item" data-plano="1,5GB" data-valor="54,99">
 						<div class="velocidade">
 							<h3 class="titulo">Celular Direto Controle</h3>
 							<span class="promo-veloc">
@@ -208,7 +225,7 @@
 						</div>
 					</li>
 
-					<li class="list-item" data-plano="2GB">
+					<li class="list-item" data-plano="2GB" data-valor="69,99">
 						<div class="velocidade">
 							<h3 class="titulo">Celular Direto Controle</h3>
 							<span class="promo-veloc">

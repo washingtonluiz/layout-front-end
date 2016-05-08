@@ -14,7 +14,6 @@
 	padding: 0 100px 40px 100px;
 	@include grid-breakpoint(phone, tablet){
 		padding: 0 10px 10px 10px;
-
 	}
 	h2.titulo{
 		background: #fff;
@@ -104,11 +103,16 @@
 				color: #fff;
 				font-family: $stdBold;
 				font-size: 50px;
-			    padding: 10px 50px 20px 50px;
+			    padding: 10px 10px 20px 10px;
 			    position: relative;
     			text-align: center;
     			.box-price{
+					margin: 0 auto;
     				position: relative;
+					width: 130px;
+					@include grid-breakpoint(phone, tablet){
+						width: 90px;
+					}
     				.cifrao{
 						font-size: 18px;
 						left: 14px;
@@ -123,7 +127,7 @@
 	    			.centavos{
 	    				font-size: 18px;
 						position: absolute;
-						right: -10px;
+						right: 10px;
 						top: 5px;
 					    vertical-align: super;
 					    @include grid-breakpoint(phone, tablet){
@@ -180,23 +184,37 @@
 	@include borderRadius(4px);
 	background: #ffffff;
 	box-shadow: 0px 0px 20px #070707;
-	height: 540px;
+	min-height: 540px;
 	left: 50%;
 	margin-left: -340px;
 	margin-top: -250px;
-	padding: 70px 40px;
+	padding: 70px 40px 30px 40px;
 	position: absolute;
 	top: 50%;
 	width: 680px;
+	@include grid-breakpoint(phone, tablet){
+		margin: 50px auto 0 auto;
+		padding: 0 20px 40px 20px;
+		position: initial;
+		width: 95%;
+	}
+	@include grid-breakpoint(tablet-large){
+		margin-top: -140px;
+	}
 	.close{
-      background: #b9b9b9;
-      color: #ffffff;
-      font-family: $stdBold;
-      font-size: 14px;
-      padding: 4px 6px;
-      position: absolute;
-      top: 10px;
-      right: 10px;
+		background: #b9b9b9;
+		color: #ffffff;
+		font-family: $stdBold;
+		font-size: 14px;
+		padding: 4px 6px;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		@include grid-breakpoint(phone, tablet){
+			float: right;
+			position: relative;
+			right: -10px;
+		}
     }
     .box-circulo{
     	@include borderRadius(50%);
@@ -207,6 +225,12 @@
     	position: absolute;
     	top: -50px;
     	width: 100px;
+    	@include grid-breakpoint(phone, tablet){
+    		height: 80px;
+    		margin-left: -40px;
+			top: 10px;
+			width: 80px;
+		}
     	.circulo{
     		@include borderRadius(50%);
     		    background: #660099;
@@ -223,7 +247,21 @@
 			    text-align: center;
 				top: 50%;
 			    width: 90px;
+			    @include grid-breakpoint(phone, tablet){
+			    	font-size: 40px;
+		    		height: 70px;
+		    		line-height: 70px;
+		    		margin-left: -35px;
+		    		margin-top: -35px;
+					width: 70px;
+				}
     	}
+    }
+    .form-contrato{
+    	@include grid-breakpoint(phone, tablet){
+			margin-top: 50px;
+    		display: inline-block;
+		}
     }
     .tipo-form{
     	background: url(../img/bg-tipo-form.png) 30% bottom no-repeat;
@@ -232,6 +270,9 @@
     		background: #ff9900;
     		max-width: 180px;
     		position: relative;
+    		@include grid-breakpoint(phone){
+			    max-width: 100%;
+			}
     		.nome{
     			@include borderRadiusTop(10px);
     			background: #660099;
@@ -241,6 +282,9 @@
 		        padding: 5px 15px 5px 0;
 				text-align: right;
 				max-width: 160px;
+				@include grid-breakpoint(phone){
+			    	max-width: 90%;
+				}
 				.count{
 					left: 15px;
 					position: absolute;
@@ -293,11 +337,18 @@
 		.campo{
 			margin-top: 20px;
 			position: relative;
+			@include grid-breakpoint(phone){
+			    margin-top: 10px;
+			}
 		}
 		.nasc, .cpf, .tel{
 			display: inline-block;
 			margin-left: 2%;
 			width: 31%;
+			@include grid-breakpoint(phone){
+				margin-left: 0;
+			    width: 100%;
+			}
 		}
 		.nasc{
 			margin-left: 0;
@@ -314,6 +365,9 @@
 			.n-tel{
 				width: 72%;
 			}
+		}
+		input:-webkit-autofill {
+			-webkit-box-shadow: 0 0 0 1000px #FFFFFF inset;
 		}
 		input[type='text']{
 			@include borderRadius(4px);
@@ -343,6 +397,82 @@
 		}
 	}
 
+	/*
+		Mensagem de Sucesso
+	*/
+	.box-sucesso{
+		display: none;
+		@include grid-breakpoint(phone, tablet){
+			padding-top: 60px;
+		}
+		.congratulations{
+			color: #555555;
+			font-family: $stdBold;
+			font-size: 40px;
+			margin-bottom: 10px;
+		}
+    	.desc{
+			color: #555555;
+			font-family: $stdBold;
+			font-size: 24px;
+			line-height: 26px;
+			margin-bottom: 30px;
+    	}
+    	.msg-resp{
+			color: #828282;
+			font-size: 16px;
+			font-family: $stdBook;
+			line-height: 20px;
+			margin-bottom: 30px;
+    	}
+    	.box-dados-plano{
+    		@include borderRadius(6px);
+			background: #ebebeb;
+			border: 1px solid #acacac;
+			display: inline-block;
+    		padding: 20px 20px 40px 20px;
+			position: relative;
+    		width: 100%;
+			.dados1, .dados2{
+				float: left;
+				.dado:first-child{
+					margin-top: 0;
+				}
+				.dado{
+					color: #7e7e7e;
+					font-family: $stdBold;
+					font-size: 14px;
+				    margin-top: 10px;
+					.cont-dado{
+						color: #a2a1a1;
+						font-family: $stdBook;
+						font-size: 15px;
+					}
+				}
+			}
+			.dados1{
+				width: 70%;
+			}
+			.dados2{
+				margin-top: 25px;
+				width: 25%;
+			}
+			.btn-ok{
+				background: rgba(153, 204, 51, 1.0);
+				bottom: -14px;
+				color: #ffffff;
+				left: 50%;
+				margin-left: -65px;
+				padding: 7px 0;
+				position: absolute;
+				width: 130px;
+				&:hover{
+					@include hoverButton(153, 204, 51, 0.9);
+				}
+			}
+    	}
+	}
+
     .footer-conteudo{
     	color: #666666;
     	bottom: 10px;
@@ -350,6 +480,11 @@
 		font-size: 12px;
     	right: 10px;
     	position: absolute;
+    	@include grid-breakpoint(phone, tablet){
+			bottom: -10px;
+			float: right;
+			position: relative;
+		}
     	.celulardireto{
     		color: #660099;
     		font-family: $stdBook;
